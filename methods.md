@@ -1,30 +1,48 @@
-# Defining Methods
+# Methods
 
-Methods allow you to smoothly display code examples in different languages.
+There are methods for storing the commission into a reservation and for calculating the commission.
 
 {% method %}
-## My first method
+## /store
 
-My first method exposes how to print a message in JavaScript and Go.
+This method calculates the commission for a given reservation and stores it into it.
 
-{% sample lang="js" %}
-Here is how to print a message to `stdout` using JavaScript.
+{% sample lang="json" %}
+Request:
 
-```js
-console.log('My first method');
-```
-
-{% sample lang="go" %}
-Here is how to print a message to `stdout` using Go.
-
-```go
-fmt.Println("My first method")
+```json
+{
+  "Locator": "<locator>",
+  "PCC" : "<pcc>"
+}
 ```
 
 {% common %}
-Whatever language you are using, the result will be the same.
+You'll also need to send your authentication token in HTTP headers with your request:
 
 ```bash
-$ My first method
+  Authorization: <token>
 ```
+Response:
+
+```json
+{
+    "Commission": {
+        "Type": "Flat",
+        "Value": "50"
+    }
+}
+```
+
 {% endmethod %}
+
+{% method %}
+## /read
+
+This method calculates the commission for a given reservation and returns it.
+
+Request and Response are the same as with /store .
+
+{% endmethod %}
+
+

@@ -1,9 +1,10 @@
 # Summary
 
-## Overview
+## Commission Microservice
 
-* [My Awesome API](README.md)
+* [Introduction](README.md)
+* [Getting started](getting-started.md)
+* [Methods](methods.md)
 
-## Methods
+## API
 
-* [Defining Methods](methods.md)
