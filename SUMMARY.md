@@ -6,5 +6,3 @@
 * [Getting started](getting-started.md)
 * [Methods](methods.md)
 
-## API
-
