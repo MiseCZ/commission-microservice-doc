@@ -23,16 +23,33 @@ You'll also need to send your authentication token in HTTP headers with your req
 ```bash
   Authorization: <token>
 ```
-Response:
+**Successful response**:
 
 ```json
 {
     "Commission": {
-        "Type": "Flat",
-        "Value": "50"
+        "Type": "<Commission type>",
+        "Value": "<Commission value>"
     }
 }
 ```
+
+* _Commission type_ - one of: Flat, PercentBase, None
+* _Commission value_ - integer of float as a string or "No commission available." string
+
+**Error response**:
+
+```json
+{
+  "Error": {
+      "Code": "<Error type>",
+      "Detail": "<Error text>"
+    }
+}
+```
+
+* _Error type_ - one of: Application, Retrieve, Store
+* _Error text_ - string
 
 {% endmethod %}
 
