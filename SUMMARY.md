@@ -2,6 +2,6 @@
 
 ## Commission Microservice
 
-* [Introduction](README.md)
-* [Methods](methods.md)
+* [CM Introduction](README.md)
+* [CM API Methods](methods.md)
 

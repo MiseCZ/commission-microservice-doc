@@ -6,37 +6,38 @@ Commission Microservice \(CM\) helps Galileo GDS users to consistently collect c
 
 There are three ways CM can help you with your commissions.
 
-* Calculator - a web page for calculating the commission.
-* API - a service for inserting the commission into the reservation.
-* Smartpoint plugin - a tool for storing the commission into the booking file.
+* CM Online calculator - a web page for calculating the commission.
+* CM API - a service for inserting the commission into the reservation.
+* CM Smartpoint plugin - a tool for storing the commission into the booking file.
 
 # Getting started
 
 1. Contact martin.brandysky@travelportgds.cz
-2. Get your authentication token, an API access or a Smartpoint plugin
-3. Start calculating and storing your commission rates
+2. Get your authentication token for Online calculator and API access or a Smartpoint plugin
+3. Define your commission rules - through our Backoffice application or through API
+4. Start calculating and storing your commission rates
 
 ## Examples
 
-### Definition of the commission
+### Definition of the commission in CM Backoffice
 
 ![](/assets/commission-example.png)
 
-### Calculator
+### CM Online calculator
 
-The Calculator is a simple page where you can easily test your access Token with a real reservation. You can also use it regularly for calculations.
+The Online calculator is a simple page where you can easily test your access Token with a real reservation. You can also use it for calculations.
 
 ![](/assets/calculator.png)
 
 The URL is [https://cm.golibe.com/](https://cm.golibe.com/) .
 
-### API
+### CM API
 
-The API is running on the URL [https://ra1qlveqm6.execute-api.eu-central-1.amazonaws.com/prod/](https://ra1qlveqm6.execute-api.eu-central-1.amazonaws.com/prod/) . The methods are described on [separate page](/methods.md).
+The API is running on the UR [https://cm.services.golibe.com/prod/](https://cm.services.golibe.com/prod/). The methods are described on [separate page](/methods.md).
 
-### Smartpoint plugin
+### CM Smartpoint plugin
 
-TBD: Smartpoint plugin screeshot
+CM Smartpoint plugin is in a development. It supports calculating and storing commission from Travelport Smartpoint application.
 
 ## 
 
