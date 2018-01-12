@@ -33,7 +33,7 @@ The URL is [https://cm.golibe.com/](https://cm.golibe.com/) .
 
 ### CM API
 
-The API is running on the UR [https://cm.services.golibe.com/prod/](https://cm.services.golibe.com/prod/). The methods are described on [separate page](/methods.md).
+The API is running on the URL https://cm.cee-systems.com/prod/. The methods are described on [separate page](/methods.md).
 
 ### CM Smartpoint plugin
 
