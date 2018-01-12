@@ -12,7 +12,7 @@ There are three ways CM can help you with your commissions.
 
 # Getting started
 
-1. Contact martin.brandysky@travelportgds.cz
+1. Contact  helpdesk@cee-systems.com
 2. Get your authentication token for Online calculator and API access or a Smartpoint plugin
 3. Define your commission rules - through our Backoffice application or through API
 4. Start calculating and storing your commission rates
@@ -33,7 +33,7 @@ The URL is [https://cm.golibe.com/](https://cm.golibe.com/) .
 
 ### CM API
 
-The API is running on the URL https://cm.cee-systems.com/prod/. The methods are described on [separate page](/methods.md).
+The API is running on the URL [https://cm.cee-systems.com/prod/](https://cm.cee-systems.com/prod/). The methods are described on [separate page](/methods.md).
 
 ### CM Smartpoint plugin
 
