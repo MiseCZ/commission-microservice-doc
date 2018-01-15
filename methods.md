@@ -49,7 +49,7 @@ This method calculates the commission for a given reservation and stores it into
 ```json
 {
   "Error": {
-      "Code": "<ErrorType>",
+      "Code": "<ErrorCode>",
       "Detail": "<ErrorText>"
     }
 }
@@ -57,7 +57,7 @@ This method calculates the commission for a given reservation and stores it into
 
 |Param|Type|Description 
 |-- |--
-|ErrorType  | Enum | One of: Application, Retrieve, Store
+|ErrorCode  | Enum | Code. It starts with category (Application, Retrieve, Store or GolApi.)
 |ErrorValue | String | Text.
 
 {% endmethod %}
@@ -159,22 +159,7 @@ This method creates a new rule for the commission calculation.
 
 **Error response**:
 
-```json
-{
-    "Error": [
-        {
-            "Type": "failure",
-            "Code": "5001",
-            "$t": "Inserting duplicate commission rule."
-        }
-    ]
-}
-```
-
-|Param|Type|Description 
-|-- |--
-|ErrorType  | String | One of: Application, Retrieve, Store |
-|ErrorValue | String | Text. |
+Error format is the same as with `POST /reservation/v1/<Pcc>/<Locator>`.
 
 {% endmethod %}
 
