@@ -254,7 +254,11 @@ Error format is the same as with `POST /rules/v1/<Pcc>`.
 Testing with curl:
 
 ```
-curl -X GET https://cm.services.golibe.com/production/rules/v1/<Pcc>/<CommissionRuleId> -H "Authorization: <AuthorizationToken>"
+# List existing commission rules
+curl -X GET https://cm.cee-systems.com/prod/rules/v1/<Pcc> -H "Authorization: <AuthorizationToken>"
+
+# View one existing commission rule
+curl -X GET https://cm.cee-systems.com/prod/rules/v1/<Pcc>/<CommissionRuleId> -H "Authorization: <AuthorizationToken>"
 
 ```
 
