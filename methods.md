@@ -57,7 +57,7 @@ This method calculates the commission for a given reservation and stores it into
 
 |Param|Type|Description 
 |-- |--
-|ErrorCode  | Enum | Code. It starts with category (Application, Retrieve, Store or GolApi.)
+|ErrorCode  | Enum | Code. It starts with category (Application, Retrieve, Store or [GolApi](http://doc.golibe.com/golapi/wiki/gol_api_xml_errors "GolApi").) 
 |ErrorValue | String | Text.
 
 {% endmethod %}
