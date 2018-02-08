@@ -32,9 +32,29 @@ This method calculates the commission for a given reservation and stores it into
 
 ```json
 {
-    "Commission": {
-        "Type": "<CommissionType>",
-        "Value": "<CommissionValue>"
+    "Reservation": {
+        "AirPricingInfo": [{
+            "Group": "<group>",
+            "Origin": "<origin>",
+            "Destination": "<destination>",
+            "PlatingCarrier": "<platingCarrier>",
+            "BasePrice": "<currency><amount>",
+            "Passenger": [{
+                "Name": "<fullName>",
+                "Type": "<type>"
+            }, ...],
+            "Result": {
+                "Commission": {
+                    "Type": "<CommissionType>",
+                    "Value": "<CommissionValue>"
+                }
+            }
+        }, ... ]
+    },
+    // if commission was stored but remark into PNR wasn't written
+    "Warning": {
+        "Code": "Remark.<typ>",
+        "Detail": "<Warning text>"
     }
 }
 ```
@@ -99,7 +119,7 @@ This method creates a new rule for the commission calculation.
         "Type": "<OperatingAirlineCombinationType>",
         "OperatingAirline": [
           {
-            "Code": "<OperatingAirlineCode>"
+              "Code": "<OperatingAirlineCode>"
           }
         ]
     },
