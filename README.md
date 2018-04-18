@@ -21,7 +21,7 @@ There are three ways CM can help you with your commissions.
 
 ### Definition of the commission in CM Backoffice
 
-![](/assets/commission-example.png)
+![](/assets/commission-example2.png)
 
 ### CM Online calculator
 

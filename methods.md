@@ -110,6 +110,10 @@ This method creates a new rule for the commission calculation.
 
 ```json
 {
+    "ApplicableForJourneys": {
+        "OneWay": "false",
+        "Return": "true"
+    },
     "ValidatingAirline": "<ValidatingAirlineCode>",
     "Priority": "<Priority>",
     "MarketingAirlineCombination": {
@@ -147,6 +151,18 @@ This method creates a new rule for the commission calculation.
     "Commission": {
         "Type": "Flat",
         "Value": "17"
+    },
+    "SalesDateRange": {
+        "DateFrom": "2018-05-01",
+        "DateTo": "2018-05-31"
+    },
+    "OriginTravelRange": {
+        "DateFrom": "2018-07-01",
+        "DateTo": "2018-08-31"
+    },
+    "DestinationTravelRange": {
+        "DateFrom": "",
+        "DateFrom": "2018-12-31"
     }
 }
 ```
