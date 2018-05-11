@@ -80,7 +80,7 @@ This method calculates the commission for a given reservation and stores it into
 |ErrorCode  | Enum | Code. It starts with category (Application, Retrieve, Store or [GolApi](http://doc.golibe.com/golapi/wiki/gol_api_xml_errors "GolApi").) 
 |ErrorValue | String | Text.
 
-***Example of error response***
+**Example of error response**
 
 ```json
 {
@@ -115,7 +115,7 @@ This method calculates the commission for a given reservation and stores it into
 }
 ```
 
-***Example of warning response***
+**Example of warning response**
 
 ```json
 {
