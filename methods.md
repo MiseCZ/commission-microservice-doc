@@ -64,7 +64,7 @@ This method calculates the commission for a given reservation and stores it into
 |CommissionType  | Enum | One of: Flat, PercentBase, None
 |CommissionValue | String | Integer or float as a string or "No commission available." constant.
 
-**Error response**:
+**Error structure**:
 
 ```json
 {
@@ -79,6 +79,81 @@ This method calculates the commission for a given reservation and stores it into
 |-- |--
 |ErrorCode  | Enum | Code. It starts with category (Application, Retrieve, Store or [GolApi](http://doc.golibe.com/golapi/wiki/gol_api_xml_errors "GolApi").) 
 |ErrorValue | String | Text.
+
+***Example of error response***
+
+```json
+{
+  "Reservation":
+  {
+    "AirPricingInfo":
+    [
+      {
+        "Group": "1",
+        "Origin": "PRG",
+        "Destination": "LGW",
+        "PlatingCarrier": "FI",
+        "BasePrice": "CZK800",
+        "Passenger":
+        [
+          {
+            "Name": "VITMR SLANINKA",
+            "Type": "ADT"
+          }
+        ],
+        "Result":
+        {
+          "Error":
+          {
+            "Code": "Store.Failed",
+            "Detail": "Store commission failed."
+          }
+        }
+      }
+    ]
+  }
+}
+```
+
+***Example of warning response***
+
+```json
+{
+  "Reservation":
+  {
+    "AirPricingInfo":
+    [
+      {
+        "Group": "1",
+        "Origin": "PRG",
+        "Destination": "LGW",
+        "PlatingCarrier": "FI",
+        "BasePrice": "CZK1000",
+        "Passenger":
+        [
+          {
+            "Name": "VITMR SLANINKA",
+            "Type": "ADT"
+          }
+        ],
+        "Result":
+        {
+          "Commission":
+          {
+            "Type": "PercentBase",
+            "Value": "5"
+          }
+        }
+      }
+    ]
+  },
+  "Warning":
+  {
+    "Code": "Remark.Failed",
+    "Detail": "Failed to add remark to reservation."
+  }
+}
+```
 
 {% endmethod %}
 
