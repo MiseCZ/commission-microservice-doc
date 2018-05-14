@@ -14,7 +14,6 @@ Accessing any resource is possible only with http header:
 Authorization: <AuthorizationToken>
 ```
 
-{% method %}
 ## Storing Commission
 
 ```
@@ -169,10 +168,6 @@ Pricings from a reservation are processed separately, so error on pricing level 
 }
 ```
 
-{% endmethod %}
-
-
-{% method %}
 ## Calculation
 
 ```
@@ -183,10 +178,7 @@ This method calculates the commission for a given reservation and returns it.
 
 Request params response and error format are the same as with `POST /reservation/v1/<Pcc>/<Locator>`.
 
-{% endmethod %}
 
-
-{% method %}
 ## Commission rule creation
 
 ```
@@ -286,10 +278,7 @@ This method creates a new rule for the commission calculation.
 
 Error format is the same as with `POST /reservation/v1/<Pcc>/<Locator>`.
 
-{% endmethod %}
 
-
-{% method %}
 ## Commission rule modification
 
 ```
@@ -300,9 +289,7 @@ This method modifies the specified commission rule.
 
 Response and error format are the same as with `POST /rules/v1/<Pcc>`.
 
-{% endmethod %}
 
-{% method %}
 ## Commission rule details
 
 ```
@@ -313,10 +300,7 @@ This method returns details the specified commission rule.
 
 Response and error format are the same as with `POST /rules/v1/<Pcc>`.
 
-{% endmethod %}
 
-
-{% method %}
 ## Commission rule canceling
 
 ```
@@ -337,10 +321,7 @@ This method cancels the specified commission rule.
 
 Error format is the same as with `POST /rules/v1/<Pcc>`.
 
-{% endmethod %}
 
-
-{% method %}
 ## Commission rule listing
 
 ```
@@ -368,9 +349,6 @@ This method returns defined commission rules.
 ```
 
 Error format is the same as with `POST /rules/v1/<Pcc>`.
-
-{% endmethod %}
-
 
 
 
