@@ -80,7 +80,21 @@ This method calculates the commission for a given reservation and stores it into
 |ErrorCode  | Enum | Code. It starts with category (Application, Retrieve, Store or [GolApi](http://doc.golibe.com/golapi/wiki/gol_api_xml_errors "GolApi").) 
 |ErrorValue | String | Text.
 
-**Example of error response**
+**Examples of error responses**
+
+Error processing a reservation:
+
+```json
+{
+  "Error":
+  {
+    "Code": "Retrieve.NoPrice",
+    "Detail" : "No price in reservation is viable for commission."
+  }
+}
+```
+
+Pricings from a reservation are processed separately, so error on pricing level is more structured:
 
 ```json
 {
