@@ -20,12 +20,12 @@ Authorization: <AuthorizationToken>
 POST /reservation/v1/<Pcc>/<Locator>
 ```
 
-This method calculates the commission for a given reservation and stores it into it. Body of 
+This method calculates the commission for a given reservation and stores it into it. Body of
 
-| Param  | Type   | Description 
-|--      |--
-|Pcc     | String | Agency's PCC
-|Locator | String | Locator of a reservation.
+| Param | Type | Description |
+| :--- | :--- | :--- |
+| Pcc | String | Agency's PCC |
+| Locator | String | Locator of a reservation. |
 
 **Successful response**:
 
@@ -58,10 +58,10 @@ This method calculates the commission for a given reservation and stores it into
 }
 ```
 
-|Param|Type|Description 
-|-- |--
-|CommissionType  | Enum | One of: Flat, PercentBase, None
-|CommissionValue | String | Integer or float as a string or "No commission available." constant.
+| Param | Type | Description |
+| :--- | :--- | :--- |
+| CommissionType | Enum | One of: Flat, PercentBase, None |
+| CommissionValue | String | Integer or float as a string or "No commission available." constant. |
 
 **Error structure**:
 
@@ -74,10 +74,10 @@ This method calculates the commission for a given reservation and stores it into
 }
 ```
 
-|Param|Type|Description 
-|-- |--
-|ErrorCode  | Enum | Code. It starts with category (Application, Retrieve, Store or [GolApi](http://doc.golibe.com/golapi/wiki/gol_api_xml_errors "GolApi").) 
-|ErrorValue | String | Text.
+| Param | Type | Description |
+| :--- | :--- | :--- |
+| ErrorCode | Enum | Code. It starts with category \(Application, Retrieve, Store or [GolApi](http://doc.golibe.com/golapi/wiki/gol_api_xml_errors "GolApi").\) |
+| ErrorValue | String | Text. |
 
 **Examples of error responses**
 
@@ -178,7 +178,6 @@ This method calculates the commission for a given reservation and returns it.
 
 Request params response and error format are the same as with `POST /reservation/v1/<Pcc>/<Locator>`.
 
-
 ## Commission rule creation
 
 ```
@@ -216,6 +215,9 @@ This method creates a new rule for the commission calculation.
         "Type": "Country",
         "Value": "AL"
     },
+    "CanBeOriginDestinationReversed": {
+        "Value": "true"
+    },
     "BookingClasses": {
         "BookingClass": [
             {
@@ -248,15 +250,13 @@ This method creates a new rule for the commission calculation.
 }
 ```
 
-|Param|Type|Description 
-|-- |--
-|ValidatingAirlineCode           | String  | Code of validating airline 
-|Priority                        | Integer | Priority of a rule. 
-|MarketingAirlineCombinationType | Enum    | One of: AnyCombination, VariousAirlines, ValidatingAirlineOnly, ValidatingAirlineMissing
-|OperatingAirlineCombinationType | Enum    | One of: AnyCombination, OperatedByListed, NotOperatedByListed
-|OperatingAirlineCode            | String  | Code of operating airline
-
-
+| Param | Type | Description |
+| :--- | :--- | :--- |
+| ValidatingAirlineCode | String | Code of validating airline |
+| Priority | Integer | Priority of a rule. |
+| MarketingAirlineCombinationType | Enum | One of: AnyCombination, VariousAirlines, ValidatingAirlineOnly, ValidatingAirlineMissing |
+| OperatingAirlineCombinationType | Enum | One of: AnyCombination, OperatedByListed, NotOperatedByListed |
+| OperatingAirlineCode | String | Code of operating airline |
 
 **Successful response**:
 
@@ -269,15 +269,14 @@ This method creates a new rule for the commission calculation.
 }
 ```
 
-|Param|Type|Description 
-|-- |--
-|CommissionType  | String | One of: Flat, PercentBase, None |
-|CommissionValue | String | Integer or float as a string or "No commission available." constant. |
+| Param | Type | Description |
+| :--- | :--- | :--- |
+| CommissionType | String | One of: Flat, PercentBase, None |
+| CommissionValue | String | Integer or float as a string or "No commission available." constant. |
 
 **Error response**:
 
 Error format is the same as with `POST /reservation/v1/<Pcc>/<Locator>`.
-
 
 ## Commission rule modification
 
@@ -289,7 +288,6 @@ This method modifies the specified commission rule.
 
 Response and error format are the same as with `POST /rules/v1/<Pcc>`.
 
-
 ## Commission rule details
 
 ```
@@ -299,7 +297,6 @@ GET /rules/v1/<Pcc>/<CommissionRuleId>
 This method returns details the specified commission rule.
 
 Response and error format are the same as with `POST /rules/v1/<Pcc>`.
-
 
 ## Commission rule canceling
 
@@ -320,7 +317,6 @@ This method cancels the specified commission rule.
 ```
 
 Error format is the same as with `POST /rules/v1/<Pcc>`.
-
 
 ## Commission rule listing
 
@@ -350,8 +346,6 @@ This method returns defined commission rules.
 
 Error format is the same as with `POST /rules/v1/<Pcc>`.
 
-
-
 ## Testing
 
 Testing with curl:
@@ -362,9 +356,7 @@ curl -X GET https://cm.cee-systems.com/prod/rules/v1/<Pcc> -H "Authorization: <A
 
 # View one existing commission rule
 curl -X GET https://cm.cee-systems.com/prod/rules/v1/<Pcc>/<CommissionRuleId> -H "Authorization: <AuthorizationToken>"
-
 ```
-
 
 
 
