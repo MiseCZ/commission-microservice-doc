@@ -255,7 +255,7 @@ This method creates a new rule for the commission calculation.
 | ValidatingAirlineCode | String | Code of validating airline |
 | Priority | Integer | Priority of a rule. |
 | MarketingAirlineCombinationType | Enum | One of: AnyCombination, VariousAirlines, ValidatingAirlineOnly, ValidatingAirlineMissing |
-| OperatingAirlineCombinationType | Enum | One of: AnyCombination, OperatedByListed, NotOperatedByListed |
+| OperatingAirlineCombinationType | Enum | One of: AnyCombination, OperatedOnlyBySomeOfListed, OperatedByAllListed, NotOperatedByListed |
 | OperatingAirlineCode | String | Code of operating airline |
 
 **Successful response**:
