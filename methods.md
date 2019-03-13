@@ -196,6 +196,8 @@ This method creates a new rule for the commission calculation.
     },
     "ValidatingAirline": "<ValidatingAirlineCode>",
     "Priority": "<Priority>",
+    "UseAsCommission": "Y",
+    "UseAsDiscount": "N",
     "MarketingAirlineCombination": {
         "Type": "<MarketingAirlineCombinationType>"
     },
@@ -219,6 +221,7 @@ This method creates a new rule for the commission calculation.
         "Value": "true"
     },
     "BookingClasses": {
+        "Mode": "<BookingClassMode>",
         "BookingClass": [
             {
                 "Code": "Y"
@@ -228,6 +231,17 @@ This method creates a new rule for the commission calculation.
             },
             {
                 "Code": "R"
+            }
+        ]
+    },  
+    "CommissionRulePassengers": {
+        "Mode": "<BookingClassMode>",
+        "CommissionRulePassenger": [
+            {
+                "PassengerType": "ADT"
+            },
+            {
+                "PassengerType": "CNN"
             }
         ]
     },
